@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EW Beauty - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./imagem/ew_beauty_logo_favicon-removebg-preview.png">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="./img/86fdf46c-08d3-4461-b076-9a2748d420bc.png" class="logoprin">
+        </div>
+        
+        <div class="botao-menu" onclick="abrirMenu()">☰</div>
+
+        <nav class="navegacao">
+            <ul id="lista-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><span>|</span></li>
+                <li><a href="nose.html">NOSSOS SERVIÇOS</a></li>
+                <li><span>|</span></li>
+                <li><a href="sobrenos.html">SOBRE NÓS</a></li>
+                <li><span>|</span></li>
+                <li><a href="contatos.html">CONTATOS</a></li>
+                <li><a href="agend.html" class="botao-agende">AGENDE</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="principal">
+            <div class="texto-principal">
+                <h2>Bem Vindas ao seu<br>Salão de Beleza</h2>
+                <a href="agend.html" class="botao-reserva">Faça Agora sua reserva!</a>
+            </div>
+            <div class="imagem-principal">
+                <img src="./img/garota-loira.png" alt="Mulher Salão de Beleza">
+            </div>
+        </section>
+
+        <div class="barrinha"></div>
+
+        <section class="servicos">
+            <h2>Nós Trabalhamos com:</h2>
+            <div class="caixas">
+                <div class="caixa">
+                    <img src="img/cabelo.jpeg" alt="Serviços de Cabelo">
+                    <h3>Cabelos</h3>
+                </div>
+                <div class="caixa">
+                    <img src="./img/unhas_qualidade_50vh.jpg" alt="Serviços de Unhas">
+                    <h3>Unhas</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="depoimentos">
+            <h2>Depoimento Dos clientes</h2>
+            <section class="testimonial-section">
+                <div class="testimonial-box">
+                    <img src="caminho-da-imagem-1.jpg" alt="Cliente" class="client-img" id="clientImage">
+                    <p class="testimonial-text" id="testimonialText">
+                        "Carregando depoimento..."
+                    </p>
+                    <h4 class="client-name" id="clientName">Nome da Cliente</h4>
+                    <span class="client-role" id="clientRole">Cliente VIP</span>
+            
+                    <div class="nav-buttons">
+                        <button class="nav-btn" onclick="prevTestimonial()">Anterior</button>
+                        <button class="nav-btn" onclick="nextTestimonial()">Próximo</button>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+        <!-- LOGO -->
+        <div class="rodape-logo">
+            <img src="./imagem/Logo EW Beauty.png" alt="EW Beauty">
+        </div>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="rodape-navegacao">
+
+            <h3>Navegação</h3>
+
+            <a href="index.html">HOME</a>
+            <a href="nose.html">NOSSOS SERVIÇOS</a>
+            <a href="sobrenos.html">SOBRE NÓS</a>
+            <a href="contatos.html">CONTATOS</a>
+
+        </div>
+
+        <!-- CONTATOS -->
+        <div class="rodape-contatos">
+
+            <h3>Contatos</h3>
+
+            <div class="rodape-icones">
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/5511926376347"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/whatsapp_sem_fundo.png" alt="WhatsApp">
+
+                </a>
+
+                <!-- GOOGLE MAPS -->
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Constancio+Teani+168+Sao+Paulo+SP"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/maps_sem_fundo.png" alt="Google Maps">
+
+                </a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/edikereswirth/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/instagram_sem_fundo.png" alt="Instagram">
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LINHA DIVISÓRIA -->
+    <div class="rodape-linha"></div>
+
+    <!-- DIREITOS AUTORAIS -->
+    <div class="rodape-direitos">
+
+        <p>© 2026 EW Beauty - Todos os direitos reservados - Política de privacidade - Termos de uso</p>
+
+        <p>Site desenvolvido por: Lume</p>
+
+    </div>
+
+</footer>
+</html>

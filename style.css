@@ -1,0 +1,677 @@
+    :root {
+        --cor-fundo: #eabfc4;
+        --cor-destaque: #c88e80;
+        --cor-texto: #ffffff;
+        --fonte-titulo: 'Playfair Display', serif;
+        --fonte-corpo: 'Montserrat', sans-serif;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+}
+.logoprin{
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+}
+.logo h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.logo span {
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 4px;
+}
+
+.navegacao ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+}
+
+.navegacao ul li a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.navegacao ul li span {
+    opacity: 0.5;
+}
+
+.botao-agende {
+    background-color: var(--cor-destaque);
+    padding: 10px 25px;
+    border-radius: 30px;
+}
+
+.botao-agende:hover {
+    background-color: #a87569;
+}
+
+.botao-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    min-height: 80vh;
+    position: relative;
+}
+
+.texto-principal {
+    width: 50%;
+    z-index: 2;
+}
+
+.texto-principal h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.botao-reserva {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-texto);
+    font-family: var(--fonte-titulo);
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid var(--cor-texto);
+    transition: 0.3s;
+}
+
+.botao-reserva:hover {
+    background-color: var(--cor-texto);
+    color: var(--cor-destaque);
+}
+
+.imagem-principal {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+}
+
+.imagem-principal img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.barrinha {
+    width: 100%;
+    height: 15px;
+    background-color: var(--cor-destaque);
+    margin-top: 20px;
+}
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 5%;
+    width: 100%;
+}
+
+.servicos h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 40px;
+    text-align: center;
+}
+.caixas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.caixa {
+    background-color: var(--cor-destaque);
+    width: 100%;
+    max-width: 350px;
+    height: 400px;
+    border-radius: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover {
+    transform: translateY(-8px);
+}
+
+.caixa h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.depoimentos {
+    padding: 20px 5% 60px 5%;
+    width: 100%;
+}
+
+.depoimentos h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .botao-menu {
+        display: block;
+    }
+
+    .navegacao {
+        position: static;
+    }
+
+    .navegacao ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-destaque);
+        padding: 20px 0;
+        gap: 20px;
+        z-index: 99;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .navegacao ul.ativo {
+        display: flex;
+    }
+
+    .navegacao ul li span { 
+        display: none; 
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 10px;
+        gap: 20px;
+    }
+
+    .texto-principal {
+        width: 100%;
+    }
+
+    .imagem-principal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagem-principal img {
+        max-width: 90%;
+    }
+
+    .caixas {
+        gap: 20px;
+    }
+
+    .caixa {
+        height: 250px;
+        max-width: 100%;
+    
+    }
+
+    .depoimentos h2 {
+        text-align: center;
+    }
+}
+.testimonial-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 40px 20px;
+}
+
+.testimonial-box {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.testimonial-box::before {
+    content: "“";
+    font-size: 120px;
+    color: #f0e6e6;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-family: serif;
+    z-index: 0;
+}
+
+.client-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.testimonial-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    min-height: 110px;
+    transition: opacity 0.3s ease;
+}
+
+.client-name {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.client-role {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    color: #d4a373;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+    position: relative;
+}
+
+.nav-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-btn {
+    background-color: #d4a373;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav-btn:hover {
+    background-color: #b88655;
+}
+.servicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.caixas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que as caixas desçam em telas menores */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caixa {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    /* RESPONSIVIDADE AQUI */
+    width: 100%;          /* Ocupa 100% do espaço disponível... */
+    max-width: 320px;     /* ...mas não passa de 320px em telas grandes */
+    height: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Impede que a imagem saia da div */
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+.caixa img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    display: block;
+}
+
+.caixa h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #d4a373;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.servicos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicos h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.caixas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que as caixas desçam em telas menores */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.caixa {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    
+    /* RESPONSIVIDADE AQUI */
+    width: 100%;          /* Ocupa 100% do espaço disponível... */
+    max-width: 320px;     /* ...mas não passa de 320px em telas grandes */
+    height: 350px;
+    
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Impede que a imagem saia da div */
+    transition: transform 0.3s ease;
+}
+
+.caixa:hover {
+    transform: translateY(-5px);
+}
+
+.caixa img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+    display: block;
+}
+/* RODAPÉ */
+.rodape {
+    background: #C78370;
+    color: white;
+    padding: 45px 5% 20px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 35px;
+    padding-bottom: 25px;
+}
+
+/* LOGO */
+.rodape-logo {
+    display: flex;
+    align-items: center;
+}
+
+.rodape-logo img {
+    width: 200px;
+    max-width: 100%;
+}
+
+/* TÍTULOS */
+.rodape-navegacao h3,
+.rodape-contatos h3 {
+    color: #F7D66B;
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+
+/* NAVEGAÇÃO */
+.rodape-navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape-navegacao a {
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: fit-content;
+    position: relative;
+}
+
+/* ANIMAÇÃO DOS LINKS */
+.rodape-navegacao a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #B8145A;
+    transition: width 0.3s ease;
+}
+
+.rodape-navegacao a:hover::after {
+    width: 100%;
+}
+
+/* CONTATOS E LINHA VERTICAL */
+.rodape-contatos {
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.rodape-contatos::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #B8145A;
+}
+
+/* ÍCONES */
+.rodape-icones {
+    display: flex;
+    gap: 12px;
+}
+
+.rodape-icones a {
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.rodape-icones img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* ANIMAÇÃO DOS ÍCONES */
+.rodape-icones a:hover {
+    transform: translateY(-8px) scale(1.08);
+    background: #B8145A;
+    border-color: #B8145A;
+}
+
+/* LINHA HORIZONTAL */
+.rodape-linha {
+    width: 100%;
+    height: 3px;
+    background: #B8145A;
+    margin-bottom: 15px;
+}
+
+/* DIREITOS AUTORAIS */
+.rodape-direitos {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.rodape-direitos p {
+    margin: 8px 0;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    .rodape-conteudo {
+        flex-wrap: wrap;
+        gap: 25px 15px;
+    }
+
+    .rodape-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape-logo img {
+        width: 160px;
+    }
+
+    .rodape-navegacao {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .rodape-contatos {
+        padding-left: 20px;
+    }
+
+    .rodape-navegacao h3,
+    .rodape-contatos h3 {
+        font-size: 19px;
+    }
+
+    .rodape-icones {
+        gap: 8px;
+    }
+
+    .rodape-icones a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .rodape-icones img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .rodape-direitos {
+        font-size: 9px;
+    }
+}
+.caixa h3 {
+    margin: 0;
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #d4a373;
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
