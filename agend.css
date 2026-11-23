@@ -1,0 +1,612 @@
+:root {
+    --cor-fundo: #eabfc4;
+    --cor-destaque: #c88e80;
+    --cor-texto: #ffffff;
+ 
+   
+}
+body{
+    font-family: var(--fonte-corpo);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.cabecalho {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 5%;
+width: 100%;
+position: relative;
+z-index: 10;
+}
+
+.logo {
+display: flex;
+}
+.logoprin{
+height: 100px;
+width: auto;
+max-width: 100px;
+}
+.logo h1 {
+
+font-size: 32px;
+font-weight: 600;
+}
+
+.logo span {
+font-size: 10px;
+letter-spacing: 4px;
+margin-top: 4px;
+}
+
+.navegacao ul {
+display: flex;
+list-style: none;
+align-items: center;
+gap: 15px;
+}
+
+.navegacao ul li a {
+color: var(--cor-texto);
+text-decoration: none;
+font-size: 13px;
+font-weight: 700;
+text-transform: uppercase;
+transition: 0.3s;
+}
+
+.navegacao ul li span {
+opacity: 0.5;
+}
+
+.botao-agende {
+background-color: var(--cor-destaque);
+padding: 10px 25px;
+border-radius: 30px;
+}
+
+.botao-agende:hover {
+background-color: #a87569;
+}
+
+.botao-menu {
+display: none;
+font-size: 30px;
+cursor: pointer;
+user-select: none;
+}
+
+.principal {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 5%;
+min-height: 80vh;
+position: relative;
+}
+
+.texto-principal {
+width: 50%;
+z-index: 2;
+}
+
+.texto-principal h2 {
+
+font-size: clamp(2.5rem, 5vw, 4.5rem);
+line-height: 1.1;
+margin-bottom: 30px;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e8b4b8;
+    color: white;
+}
+
+/* PÁGINA DE AGENDAMENTO */
+
+.pagina-agendamento {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #e8b4b8;
+}
+
+.agendamento {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    background-color: #C88271;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* TÍTULO */
+
+.titulo-agendamento {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-agendamento h1 {
+    color: #c2185b;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.titulo-agendamento p {
+    color: #FfF;
+    font-size: 15px;
+}
+
+/* CAMPOS */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.titulo-campo {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c2185b;
+}
+
+.campo input[type="text"],
+.campo input[type="tel"],
+.campo input[type="date"],
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #e8b4b8;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+   
+    background-color: transparent;
+    color: white;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #e8b4b8;
+    color: white;
+    box-shadow: 0 0 5px rgba(194, 24, 91, 0.15);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* LISTAS QUE ABREM */
+
+.lista-opcoes {
+    border: 1px solid #e5d5d5;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+}
+
+.lista-opcoes summary {
+    padding: 15px;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    transition: 0.3s;
+}
+
+.lista-opcoes summary::-webkit-details-marker {
+    display: none;
+}
+
+.lista-opcoes summary::after {
+    content: "+";
+    position: absolute;
+    right: 15px;
+    color: #FfF;
+    font-size: 22px;
+}
+
+.lista-opcoes[open] summary::after {
+    content: "-";
+}
+
+.lista-opcoes summary:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/* OPÇÕES */
+
+.opcoes {
+    padding: 10px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    color: white;
+    animation: abrir 0.3s ease;
+}
+
+.opcoes label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+}
+
+/* checkbox */
+
+.opcoes input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #c88271;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.opcoes input[type="checkbox"]:checked {
+    background-color: #c88271;
+    border-color: #c88271;
+}
+
+.opcoes input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* ANIMAÇÃO */
+
+@keyframes abrir {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* BOTÃO */
+
+.botao-agendar {
+      background-color: #c2185b;
+    color: white;
+    padding: 15px 35px;
+    border: 1px solid #e8b4b8;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.botao-agendar:hover {
+    background-color: transparent;
+    color: white;
+   
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .pagina-agendamento {
+        padding: 30px 15px;
+    }
+
+    .agendamento {
+        padding: 25px 20px;
+    }
+
+    .titulo-agendamento h1 {
+        font-size: 26px;
+    }
+
+}
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: white;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+}
+.logoprin{
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+}
+@media (max-width: 768px) {
+    .botao-menu {
+        display: block;
+    }
+
+    .navegacao {
+        position: static;
+    }
+
+    .navegacao ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-destaque);
+        padding: 20px 0;
+        gap: 20px;
+        z-index: 99;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    }
+
+    .navegacao ul.ativo {
+        display: flex;
+    }
+
+    .navegacao ul li span { 
+        display: none; 
+    }
+
+    .principal {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 10px;
+        gap: 20px;
+    }
+
+    .texto-principal {
+        width: 100%;
+    }
+
+    .imagem-principal {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .imagem-principal img {
+        max-width: 90%;
+    }
+
+    .caixas {
+        gap: 20px;
+    }
+
+    .caixa {
+        height: 250px;
+        max-width: 100%;
+    }
+
+    .depoimentos h2 {
+        text-align: center;
+    }
+}
+
+
+
+
+/* RODAPÉ */
+.rodape {
+    background: #C78370;
+    color: white;
+    padding: 45px 5% 20px;
+}
+
+.rodape-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 35px;
+    padding-bottom: 25px;
+}
+
+/* LOGO */
+.rodape-logo {
+    display: flex;
+    align-items: center;
+}
+
+.rodape-logo img {
+    width: 200px;
+    max-width: 100%;
+}
+
+/* TÍTULOS */
+.rodape-navegacao h3,
+.rodape-contatos h3 {
+    color: #F7D66B;
+    font-size: 22px;
+    margin: 0 0 20px;
+}
+
+/* NAVEGAÇÃO */
+.rodape-navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rodape-navegacao a {
+    color: white;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: 14px;
+    font-weight: bold;
+    width: fit-content;
+    position: relative;
+}
+
+/* ANIMAÇÃO DOS LINKS */
+.rodape-navegacao a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #B8145A;
+    transition: width 0.3s ease;
+}
+
+.rodape-navegacao a:hover::after {
+    width: 100%;
+}
+
+/* CONTATOS E LINHA VERTICAL */
+.rodape-contatos {
+    position: relative;
+    padding-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.rodape-contatos::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #B8145A;
+}
+
+/* ÍCONES */
+.rodape-icones {
+    display: flex;
+    gap: 12px;
+}
+
+.rodape-icones a {
+    width: 42px;
+    height: 42px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    flex-shrink: 0;
+}
+
+.rodape-icones img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+/* ANIMAÇÃO DOS ÍCONES */
+.rodape-icones a:hover {
+    transform: translateY(-8px) scale(1.08);
+    background: #B8145A;
+    border-color: #B8145A;
+}
+
+/* LINHA HORIZONTAL */
+.rodape-linha {
+    width: 100%;
+    height: 3px;
+    background: #B8145A;
+    margin-bottom: 15px;
+}
+
+/* DIREITOS AUTORAIS */
+.rodape-direitos {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.rodape-direitos p {
+    margin: 8px 0;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    .rodape-conteudo {
+        flex-wrap: wrap;
+        gap: 25px 15px;
+    }
+
+    .rodape-logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .rodape-logo img {
+        width: 160px;
+    }
+
+    .rodape-navegacao {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .rodape-contatos {
+        padding-left: 20px;
+    }
+
+    .rodape-navegacao h3,
+    .rodape-contatos h3 {
+        font-size: 19px;
+    }
+
+    .rodape-icones {
+        gap: 8px;
+    }
+
+    .rodape-icones a {
+        width: 38px;
+        height: 38px;
+    }
+
+    .rodape-icones img {
+        width: 23px;
+        height: 23px;
+    }
+
+    .rodape-direitos {
+        font-size: 9px;
+    }
+}

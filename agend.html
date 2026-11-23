@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agend.css">
+    <title>EW Beauty - Agendamento</title>
+
+    <link rel="icon" type="image/png" href="./imagem/ew_beauty_logo_favicon-removebg-preview.png">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <img src="./imagem/Logotipo EV Beauty em Rose Gold.png" class="logoprin">
+        </div>
+        
+        <div class="botao-menu" onclick="abrirMenu()">☰</div>
+
+        <nav class="navegacao">
+            <ul id="lista-menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><span>|</span></li>
+                <li><a href="nose.html">NOSSOS SERVIÇOS</a></li>
+                <li><span>|</span></li>
+                <li><a href="sobrenos.html">SOBRE NÓS</a></li>
+                <li><span>|</span></li>
+                <li><a href="contatos.html">CONTATOS</a></li>
+                <li><a href="agend.html" class="botao-agende">AGENDE</a></li>
+            </ul>
+        </nav>
+    </header>
+<main class="pagina-agendamento">
+
+    <section class="agendamento">
+        <div class="titulo-agendamento">
+            <h1>Agende seu horário</h1>
+            <p>Reserve seu momento de cuidado e beleza.</p>
+        </div>
+
+        <form id="formAgendamento">
+
+            <!-- SERVIÇOS -->
+            <div class="campo">
+                <label class="titulo-campo">Escolha seus serviços</label>
+
+                <details class="lista-opcoes">
+                    <summary>Selecione os serviços</summary>
+
+                   <div class="opcoes">
+
+    <p class="categoria-servico">UNHAS</p>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Manicure">
+        Manicure
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Pedicure">
+        Pedicure
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Unha de gel">
+        Unha de gel
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Unha de fibra">
+        Unha de fibra
+    </label>
+
+    <p class="categoria-servico">CABELO</p>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Cortes">
+        Cortes
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Escova">
+        Escova
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Tratamentos">
+        Tratamentos
+    </label>
+
+    <label>
+        <input type="checkbox" name="servicos" value="Coloração">
+        Coloração
+    </label>
+
+</div>
+                </details>
+            </div>
+
+            <!-- DATA -->
+            <div class="campo">
+                <label for="data" class="titulo-campo">
+                    Escolha a data
+                </label>
+
+                <input type="date" id="data" name="data" required>
+            </div>
+
+           <!-- HORÁRIOS -->
+
+<div class="campo">
+    <label class="titulo-campo">Escolha seu horário</label>
+
+    <details class="lista-opcoes">
+        <summary>Selecione o horário</summary>
+
+        <div class="opcoes horarios">
+
+            <label><input type="checkbox" name="horario" value="08:00"> 08:00</label>
+            <label><input type="checkbox" name="horario" value="08:30"> 08:30</label>
+            <label><input type="checkbox" name="horario" value="09:00"> 09:00</label>
+            <label><input type="checkbox" name="horario" value="09:30"> 09:30</label>
+            <label><input type="checkbox" name="horario" value="10:00"> 10:00</label>
+            <label><input type="checkbox" name="horario" value="10:30"> 10:30</label>
+            <label><input type="checkbox" name="horario" value="11:00"> 11:00</label>
+            <label><input type="checkbox" name="horario" value="11:30"> 11:30</label>
+            <label><input type="checkbox" name="horario" value="12:00"> 12:00</label>
+            <label><input type="checkbox" name="horario" value="12:30"> 12:30</label>
+            <label><input type="checkbox" name="horario" value="13:00"> 13:00</label>
+            <label><input type="checkbox" name="horario" value="13:30"> 13:30</label>
+            <label><input type="checkbox" name="horario" value="14:00"> 14:00</label>
+            <label><input type="checkbox" name="horario" value="14:30"> 14:30</label>
+            <label><input type="checkbox" name="horario" value="15:00"> 15:00</label>
+            <label><input type="checkbox" name="horario" value="15:30"> 15:30</label>
+            <label><input type="checkbox" name="horario" value="16:00"> 16:00</label>
+            <label><input type="checkbox" name="horario" value="16:30"> 16:30</label>
+            <label><input type="checkbox" name="horario" value="17:00"> 17:00</label>
+            <label><input type="checkbox" name="horario" value="17:30"> 17:30</label>
+            <label><input type="checkbox" name="horario" value="18:00"> 18:00</label>
+            <label><input type="checkbox" name="horario" value="18:30"> 18:30</label>
+            <label><input type="checkbox" name="horario" value="19:00"> 19:00</label>
+            <label><input type="checkbox" name="horario" value="19:30"> 19:30</label>
+            <label><input type="checkbox" name="horario" value="20:00"> 20:00</label>
+            <label><input type="checkbox" name="horario" value="20:30"> 20:30</label>
+            <label><input type="checkbox" name="horario" value="21:00"> 21:00</label>
+
+        </div>
+    </details>
+</div>
+
+            <!-- DADOS -->
+            <div class="campo">
+                <label for="nome" class="titulo-campo">
+                    Nome completo
+                </label>
+
+                <input type="text" id="nome" name="nome"
+                placeholder="Digite seu nome completo" required>
+            </div>
+
+            <!-- obsrrvação -->
+            <div class="campo">
+                <label for="observacao" class="titulo-campo">
+                    Observações
+                </label>
+
+                <textarea id="observacao" name="observacao"
+                placeholder="Deseja nos contar algo? Escreva aqui..."
+                rows="5"></textarea>
+            </div>
+
+            <!-- BOTÃO -->
+            <button type="submit" class="botao-agendar">
+                Confirmar agendamento
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="rodape">
+
+    <div class="rodape-conteudo">
+
+        <!-- LOGO -->
+        <div class="rodape-logo">
+            <img src="./imagem/Logo EW Beauty.png" alt="EW Beauty">
+        </div>
+
+        <!-- NAVEGAÇÃO -->
+        <div class="rodape-navegacao">
+
+            <h3>Navegação</h3>
+
+            <a href="index.html">HOME</a>
+            <a href="nose.html">NOSSOS SERVIÇOS</a>
+            <a href="sobrenos.html">SOBRE NÓS</a>
+            <a href="contatos.html">CONTATOS</a>
+
+        </div>
+
+        <!-- CONTATOS -->
+        <div class="rodape-contatos">
+
+            <h3>Contatos</h3>
+
+            <div class="rodape-icones">
+
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/5511926376347"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/whatsapp_sem_fundo.png" alt="WhatsApp">
+
+                </a>
+
+                <!-- GOOGLE MAPS -->
+                <a href="https://www.google.com/maps/search/?api=1&query=Rua+Doutor+Constancio+Teani+168+Sao+Paulo+SP"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/maps_sem_fundo.png" alt="Google Maps">
+
+                </a>
+
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/edikereswirth/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img src="./imagem/instagram_sem_fundo.png" alt="Instagram">
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- LINHA DIVISÓRIA -->
+    <div class="rodape-linha"></div>
+
+    <!-- DIREITOS AUTORAIS -->
+    <div class="rodape-direitos">
+
+        <p>© 2026 EW Beauty - Todos os direitos reservados - Política de privacidade - Termos de uso</p>
+
+        <p>Site desenvolvido por: Lume</p>
+
+    </div>
+
+</footer>
+
+
+<script src="agend.js"></script>
+</body>
+</html>
