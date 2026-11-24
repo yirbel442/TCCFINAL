@@ -88,7 +88,38 @@ body {
     cursor: pointer;
     user-select: none;
 }
-
+.principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    min-height: 80vh;
+    position: relative;
+    }
+    
+    .texto-principal {
+    width: 50%;
+    z-index: 2;
+    }
+    
+    .texto-principal h2 {
+    font-family: var(--fonte-titulo);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    }
+    
+ 
+    
+    .imagem-principal img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
+    
 .topo {
     display: grid;
     grid-template-columns: 1fr 1fr;

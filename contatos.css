@@ -1,8 +1,11 @@
+
+/* CONFIGURAÇÕES GERAIS */
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --cor-fundo: #eabfc4;
     --cor-destaque: #c88e80;
@@ -11,187 +14,164 @@
     --fonte-corpo: 'Montserrat', sans-serif;
 }
 
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-background-color: var(--cor-fundo);
-color: var(--cor-texto);
-font-family: var(--fonte-corpo);
-overflow-x: hidden;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+    overflow-x: hidden;
+    width: 100%;
 }
 
+/* CABEÇALHO */
 .cabecalho {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 5%;
-width: 100%;
-position: relative;
-z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
-display: flex;
+    display: flex;
 }
-.logoprin{
-height: 100px;
-width: auto;
-max-width: 100px;
+
+.logoprin {
+    height: 100px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
 }
+
 .logo h1 {
-font-family: var(--fonte-titulo);
-font-size: 32px;
-font-weight: 600;
+    font-family: var(--fonte-titulo);
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .logo span {
-font-size: 10px;
-letter-spacing: 4px;
-margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 4px;
 }
 
 .navegacao ul {
-display: flex;
-list-style: none;
-align-items: center;
-gap: 15px;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
 }
 
 .navegacao ul li a {
-color: var(--cor-texto);
-text-decoration: none;
-font-size: 13px;
-font-weight: 700;
-text-transform: uppercase;
-transition: 0.3s;
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
 .navegacao ul li span {
-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .botao-agende {
-background-color: var(--cor-destaque);
-padding: 10px 25px;
-border-radius: 30px;
+    background-color: var(--cor-destaque);
+    padding: 10px 25px;
+    border-radius: 30px;
 }
 
 .botao-agende:hover {
-background-color: #a87569;
+    background-color: #a87569;
 }
 
 .botao-menu {
-display: none;
-font-size: 30px;
-cursor: pointer;
-user-select: none;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
 }
 
-.principal {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 20px 5%;
-min-height: 80vh;
-position: relative;
+/* INFORMAÇÕES DE CONTATO */
+.imgsatendmento {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
 }
 
-.texto-principal {
-width: 50%;
-z-index: 2;
-}
-
-.texto-principal h2 {
-font-family: var(--fonte-titulo);
-font-size: clamp(2.5rem, 5vw, 4.5rem);
-line-height: 1.1;
-margin-bottom: 30px;
-}
-@media (max-width: 768px){
-    header{
-        flex-direction: column;
-        text-align: center;
-    }
-    nav{
-        justify-content: center;
-        width: 100%;
-    }
-}
-@media (max-width: 480px){
-    body{
-        font-size: 14px;
-        padding: 8px;
-    }
-    .card{
-        padding: 16px;
-    }
-}
-
-.imgsatendmento{
-width: 50px;
-height: 50px;
-}
-.informctts{
-    background-color: #C88271;
-    border-radius: 20px;
-    width: 490px;
-    padding: 25px;
-    height: 400px;
-color: aliceblue;
-}
-.caixasctts{
+.caixasctts {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     gap: 70px;
-margin-top: 30px;
+    margin: 30px auto 0;
+    padding: 0 5%;
 }
-.h2localizados{
-text-align: center;
-font-size: 35px;
-color: white;
+
+.informctts {
+    background-color: #C88271;
+    border-radius: 20px;
+    width: 490px;
+    max-width: 100%;
+    padding: 25px;
+    min-height: 400px;
+    color: aliceblue;
 }
-.encimafotoh3{
-    color: #fffcf2
-}
-.informdiv{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: normal;
-}
-.h2inicio{
+
+.h2inicio {
     text-align: center;
     font-size: 30px;
     color: #c2185b;
 }
-.enderecodiv{
+
+.encimafotoh3 {
+    color: #fffcf2;
+}
+
+.informdiv {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    overflow-wrap: anywhere;
+}
+
+.enderecodiv {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
+.enderecodiv img {
+    flex-shrink: 0;
+}
 
+/* TÍTULO DA LOCALIZAÇÃO */
+.h2localizados {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 0 15px;
+}
 
-
-
-
-
-
+/* MAPA */
 .localizacao {
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
     margin: 30px auto;
-    
 }
 
 .localizacao iframe {
     width: 100%;
     height: 500px;
+    border: 0;
     border-radius: 5px;
+    display: block;
 }
 
 .localizacao a {
@@ -204,41 +184,46 @@ color: white;
     border-radius: 5px;
 }
 
-
-
+/* FORMULÁRIO */
 .contato {
-
     width: 90%;
+    max-width: 1200px;
     margin: 40px auto;
     padding: 50px 20px;
     border-radius: 40px;
     text-align: center;
-   background-color: #C88271;
-   color: white;
-   
-
-
+    background-color: #C88271;
+    color: white;
 }
 
-.formulario{
+.contato h2 {
+    font-size: 25px;
+}
+
+.contato h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.formulario {
     width: 70%;
+    max-width: 850px;
     margin: auto;
 }
 
-.campos{
+.campos {
     display: flex;
     gap: 30px;
     margin-bottom: 15px;
 }
 
-
-
 .campos input {
     width: 50%;
+    min-width: 0;
     padding: 15px;
     border: none;
     border-radius: 30px;
-    background-color:  #e8b4b8;
+    background-color: #e8b4b8;
     color: white;
     outline: none;
 }
@@ -276,75 +261,52 @@ color: white;
 .formulario button:hover {
     background-color: transparent;
     color: white;
-   
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
-.contato h2{
-    font-size: 25px;
-  
-}
-
-.contato h3{
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-.cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    width: 100%;
-    position: relative;
-    z-index: 10;
-}
-.logoprin{
-    height: 100px;
-    width: auto;
-    max-width: 100px;
-}
-
-
 
 /* RODAPÉ */
 .rodape {
     background: #C78370;
     color: white;
-    padding: 45px 5% 20px;
+    padding: 40px 5% 20px;
+    width: 100%;
 }
 
 .rodape-conteudo {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 35px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
     padding-bottom: 25px;
 }
 
-/* LOGO */
+/* LOGO DO RODAPÉ */
 .rodape-logo {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex: 1;
 }
 
 .rodape-logo img {
-    width: 200px;
+    width: 180px;
     max-width: 100%;
+    object-fit: contain;
 }
 
-/* TÍTULOS */
-.rodape-navegacao h3,
-.rodape-contatos h3 {
-    color: #F7D66B;
-    font-size: 22px;
-    margin: 0 0 20px;
-}
-
-/* NAVEGAÇÃO */
+/* NAVEGAÇÃO DO RODAPÉ */
 .rodape-navegacao {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    flex: 1;
+    align-items: center;
+}
+
+.rodape-navegacao h3 {
+    color: #F7D66B;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 .rodape-navegacao a {
@@ -358,7 +320,6 @@ color: white;
     position: relative;
 }
 
-/* ANIMAÇÃO DOS LINKS */
 .rodape-navegacao a::after {
     content: "";
     position: absolute;
@@ -374,26 +335,22 @@ color: white;
     width: 100%;
 }
 
-/* CONTATOS E LINHA VERTICAL */
+/* CONTATOS DO RODAPÉ */
 .rodape-contatos {
-    position: relative;
-    padding-left: 35px;
+    flex: 1;
+    padding-left: 30px;
+    border-left: 3px solid #B8145A;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
-.rodape-contatos::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #B8145A;
+.rodape-contatos h3 {
+    color: #F7D66B;
+    font-size: 22px;
+    margin-bottom: 25px;
 }
 
-/* ÍCONES */
 .rodape-icones {
     display: flex;
     gap: 12px;
@@ -417,14 +374,13 @@ color: white;
     object-fit: contain;
 }
 
-/* ANIMAÇÃO DOS ÍCONES */
 .rodape-icones a:hover {
     transform: translateY(-8px) scale(1.08);
     background: #B8145A;
     border-color: #B8145A;
 }
 
-/* LINHA HORIZONTAL */
+/* LINHA DO RODAPÉ */
 .rodape-linha {
     width: 100%;
     height: 3px;
@@ -437,45 +393,236 @@ color: white;
     text-align: center;
     font-size: 10px;
     font-weight: bold;
+    line-height: 1.6;
 }
 
 .rodape-direitos p {
     margin: 8px 0;
 }
 
-/* CELULAR */
-@media (max-width: 700px) {
+/* TABLETS */
+@media (max-width: 1024px) {
 
-    .rodape-conteudo {
-        flex-wrap: wrap;
-        gap: 25px 15px;
+    .cabecalho {
+        padding: 15px 3%;
     }
 
-    .rodape-logo {
-        width: 100%;
-        justify-content: center;
+    .logoprin {
+        height: 80px;
+    }
+
+    .navegacao ul {
+        gap: 10px;
+    }
+
+    .navegacao ul li a {
+        font-size: 11px;
+    }
+
+    .caixasctts {
+        gap: 25px;
+        padding: 0 3%;
+    }
+
+    .informctts {
+        width: 50%;
+        padding: 20px;
+    }
+
+    .h2inicio {
+        font-size: 24px;
+    }
+
+    .informdiv {
+        font-size: 16px;
+    }
+
+    .formulario {
+        width: 85%;
+    }
+
+    /* RODAPÉ */
+    .rodape-conteudo {
+        gap: 20px;
     }
 
     .rodape-logo img {
-        width: 160px;
-    }
-
-    .rodape-navegacao {
-        flex: 1;
-        min-width: 0;
+        width: 150px;
     }
 
     .rodape-contatos {
         padding-left: 20px;
     }
+}
+
+/* CELULARES */
+@media (max-width: 700px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        padding: 15px 5%;
+        flex-direction: row;
+    }
+
+    .logoprin {
+        height: 75px;
+    }
+
+    .botao-menu {
+        display: block;
+        color: white;
+    }
+
+    .navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #C78370;
+        display: none;
+        padding: 20px 0;
+    }
+
+    .navegacao.ativo {
+        display: block;
+    }
+
+    .navegacao ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navegacao ul li span {
+        display: none;
+    }
+
+    .navegacao ul li a {
+        font-size: 14px;
+    }
+
+    /* ARTIGOS */
+    .caixasctts {
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 5%;
+        margin-top: 20px;
+    }
+
+    .informctts {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .h2inicio {
+        font-size: 23px;
+    }
+
+    .encimafotoh3 {
+        font-size: 16px;
+    }
+
+    .informdiv {
+        font-size: 15px;
+    }
+
+    .imgsatendmento {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* LOCALIZAÇÃO */
+    .h2localizados {
+        font-size: 27px;
+    }
+
+    .localizacao {
+        width: 92%;
+    }
+
+    .localizacao iframe {
+        height: 350px;
+    }
+
+    /* FORMULÁRIO */
+    .contato {
+        width: 92%;
+        padding: 35px 18px;
+        border-radius: 25px;
+    }
+
+    .contato h2 {
+        font-size: 21px;
+    }
+
+    .contato h3 {
+        font-size: 17px;
+        margin-bottom: 25px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .campos {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .campos input {
+        width: 100%;
+    }
+
+    .formulario textarea {
+        height: 150px;
+    }
+
+    .formulario button {
+        padding: 13px 25px;
+    }
+
+    /* RODAPÉ */
+    .rodape {
+        padding: 30px 5% 20px;
+    }
+
+    .rodape-conteudo {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rodape-logo {
+        width: 100%;
+        flex: 100%;
+    }
+
+    .rodape-logo img {
+        width: 150px;
+    }
+
+    .rodape-navegacao {
+        flex: 1;
+        min-width: 130px;
+        align-items: center;
+    }
+
+    .rodape-contatos {
+        flex: 1;
+        min-width: 130px;
+        padding-left: 15px;
+    }
 
     .rodape-navegacao h3,
     .rodape-contatos h3 {
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .rodape-icones {
         gap: 8px;
+        flex-wrap: wrap;
     }
 
     .rodape-icones a {
@@ -484,11 +631,40 @@ color: white;
     }
 
     .rodape-icones img {
-        width: 23px;
-        height: 23px;
+        width: 22px;
+        height: 22px;
     }
 
     .rodape-direitos {
         font-size: 9px;
+        line-height: 1.6;
+    }
+}
+
+/* CELULARES PEQUENOS */
+@media (max-width: 380px) {
+
+    .logoprin {
+        height: 65px;
+    }
+
+    .h2inicio {
+        font-size: 20px;
+    }
+
+    .informdiv {
+        font-size: 14px;
+    }
+
+    .localizacao iframe {
+        height: 280px;
+    }
+
+    .rodape-icones {
+        gap: 5px;
+    }
+
+    .rodape-contatos {
+        padding-left: 12px;
     }
 }
