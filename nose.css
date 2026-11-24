@@ -91,12 +91,12 @@ body {
 .principal {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 20px 5%;
     min-height: 80vh;
     position: relative;
     }
-    
+
     .texto-principal {
     width: 50%;
     z-index: 2;
@@ -113,12 +113,19 @@ body {
     
     .imagem-principal img {
     width: 100%;
-    max-width: 600px;
     height: auto;
+    max-width: none;
     object-fit: contain;
-    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-    }
+        -webkit-mask-image:
+          linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+          linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+        -webkit-mask-composite: source-in;
+        mask-image:
+          linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%),
+          linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+        mask-composite: intersect;
+      }
+    
     
 .topo {
     display: grid;
