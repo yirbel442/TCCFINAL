@@ -82,10 +82,10 @@ background-color: #a87569;
 }
 
 .botao-menu {
-display: none;
-font-size: 30px;
-cursor: pointer;
-user-select: none;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .principal {
@@ -413,7 +413,10 @@ body{
     .imagem-principal img {
         max-width: 90%;
     }
-
+    .botao-menu {
+        display: block;
+        color: white;
+    }
     .caixas {
         gap: 20px;
     }

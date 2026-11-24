@@ -87,10 +87,10 @@ background-color: #a87569;
 }
 
 .botao-menu {
-display: none;
-font-size: 30px;
-cursor: pointer;
-user-select: none;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
 }
 
 .principal {
@@ -690,6 +690,48 @@ margin: 8px 0;
 .rodape-direitos {
     font-size: 9px;
 }
+   /* CABEÇALHO */
+   .cabecalho {
+    padding: 15px 5%;
+    flex-direction: row;
+}
+
+.logoprin {
+    height: 75px;
+}
+
+.botao-menu {
+    display: block;
+    color: white;
+}
+
+.navegacao {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #C78370;
+    display: none;
+    padding: 20px 0;
+}
+
+.navegacao.ativo {
+    display: block;
+}
+
+.navegacao ul {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navegacao ul li span {
+    display: none;
+}
+
+.navegacao ul li a {
+    font-size: 14px;
+}
+
 }
 .caixa h3 {
 margin: 0;

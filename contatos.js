@@ -24,9 +24,7 @@ formulario.addEventListener("submit", function(event) {
 
     // Criando a mensagem
     const texto = `Olá! Meu nome é ${nome}.
-
 Meu e-mail: ${email}
-
 Minha mensagem: ${mensagem}`;
 
     // Criando o link do WhatsApp

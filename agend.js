@@ -69,13 +69,9 @@ formulario.addEventListener("submit", function (event) {
 `Olá! Gostaria de solicitar um agendamento na EW Beauty.
 
 Nome: ${nome}
-
 Serviços: ${listaServicos}
-
 Data: ${dataFormatada}
-
 Horário: ${horarioSelecionado.value}
-
 Observação: ${observacao || "Nenhuma"}
 
 Aguardo a confirmação!`;
