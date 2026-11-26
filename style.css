@@ -25,7 +25,6 @@ justify-content: space-between;
 align-items: center;
 padding: 20px 5%;
 width: 100%;
-
 position: fixed;
 top: 0;
 left: 0;
@@ -35,7 +34,6 @@ border-radius: 20px;
 padding: 12px 25px;
 border: 0.5px solid #ffffff;
 }
-
 .logo {
 display: flex;
 }
@@ -97,6 +95,8 @@ background-color: #a87569;
 display: flex;
 align-items: center;
 justify-content: space-between;
+margin-top: 13px;
+padding-top: 0px;
 padding: 20px 5%;
 min-height: 80vh;
 position: relative;
@@ -205,7 +205,6 @@ font-weight: 700;
 }
 
 .depoimentos {
-padding: 20px 5% 60px 5%;
 width: 100%;
 }
 .servicos h3{
@@ -218,18 +217,13 @@ width: 100%;
     text-align: center;
     font-size: 35px;
 }
-
-
-
 @media (max-width: 768px) {
 .botao-menu {
     display: block;
 }
-
 .navegacao {
     position: static;
 }
-
 .navegacao ul {
     display: none;
     flex-direction: column;
